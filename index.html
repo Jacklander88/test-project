@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Color Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Furniture Color Selector</h1>
+            <p>Choose the perfect color for your furniture</p>
+        </header>
+
+        <main>
+            <div class="furniture-display">
+                <div class="furniture-item" id="furniture-preview">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Chair/Seat -->
+                        <rect x="100" y="150" width="200" height="20" rx="5" class="furniture-seat" fill="var(--furniture-color)"/>
+                        <rect x="100" y="170" width="20" height="80" rx="5" class="furniture-leg" fill="var(--furniture-color)"/>
+                        <rect x="280" y="170" width="20" height="80" rx="5" class="furniture-leg" fill="var(--furniture-color)"/>
+                        <rect x="120" y="100" width="160" height="20" rx="5" class="furniture-back" fill="var(--furniture-color)"/>
+                        <rect x="120" y="100" width="20" height="50" rx="5" class="furniture-back-support" fill="var(--furniture-color)"/>
+                        <rect x="260" y="100" width="20" height="50" rx="5" class="furniture-back-support" fill="var(--furniture-color)"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="color-selector-panel">
+                <div class="color-picker-section">
+                    <h2>Custom Color</h2>
+                    <div class="color-input-group">
+                        <input type="color" id="colorPicker" value="#8B4513">
+                        <input type="text" id="colorHex" value="#8B4513" placeholder="#000000">
+                    </div>
+                </div>
+
+                <div class="preset-colors-section">
+                    <h2>Preset Colors</h2>
+                    <div class="preset-colors-grid" id="presetColors">
+                        <!-- Preset colors will be added by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="color-info">
+                    <div class="current-color-display">
+                        <span>Current Color:</span>
+                        <div class="color-swatch" id="currentColorSwatch"></div>
+                        <span id="currentColorName">Brown</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="furniture-options">
+            <h2>Select Furniture Type</h2>
+            <div class="furniture-types">
+                <button class="furniture-type-btn active" data-type="chair">Chair</button>
+                <button class="furniture-type-btn" data-type="sofa">Sofa</button>
+                <button class="furniture-type-btn" data-type="table">Table</button>
+                <button class="furniture-type-btn" data-type="cabinet">Cabinet</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
